@@ -1,0 +1,7 @@
+# Private / local files — never publish these
+Website_Vision_Kaveri.docx
+PUBLISH-GUIDE.md
+.claude/
+memory/
+.DS_Store
+Thumbs.db
