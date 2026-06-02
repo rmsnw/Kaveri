@@ -208,6 +208,7 @@ ul { list-style: none; }
 .nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
 .nav-links .btn { color: var(--white); }
 .nav-links .btn::after { display: none; }
+.nav-links .btn--primary:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
 
 .nav-toggle {
   display: none;
