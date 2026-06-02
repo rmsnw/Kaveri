@@ -465,5 +465,22 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- Homepage-only preview: links to other pages are disabled for now -->
+  <script>
+    (function () {
+      document.querySelectorAll('a[href]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (!href) { return; }
+        var isOtherPage = /\.html(\?|#|$)/i.test(href) && href.indexOf('index.html') === -1;
+        if (isOtherPage) {
+          a.addEventListener('click', function (e) { e.preventDefault(); });
+          a.style.cursor = 'not-allowed';
+          a.setAttribute('aria-disabled', 'true');
+          a.setAttribute('title', 'Full site coming soon');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
